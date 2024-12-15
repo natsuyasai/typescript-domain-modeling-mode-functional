@@ -1,0 +1,1 @@
+# typescript-domain-modeling-mode-functional
