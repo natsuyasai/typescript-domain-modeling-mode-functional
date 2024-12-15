@@ -67,3 +67,7 @@ type PlaceOrderError =
 
 // やるなら例外？
 type PlaceOrder = (order: UnvalidatedOrder) => PlaceOrderEvents | PlaceOrderError;
+
+export function PlaceOrder(order: UnvalidatedOrder): PlaceOrderEvents {
+  // throw PlaceOrderError;
+}
