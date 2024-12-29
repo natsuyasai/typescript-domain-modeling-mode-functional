@@ -69,5 +69,13 @@ type PlaceOrderError =
 type PlaceOrder = (order: UnvalidatedOrder) => PlaceOrderEvents | PlaceOrderError;
 
 export function PlaceOrder(order: UnvalidatedOrder): PlaceOrderEvents {
-  // throw PlaceOrderError;
+  if (order.OrderId) {
+    return {};
+  }
+  throw {
+    ValidationError: {
+      FieldName: "",
+      ErrorDescription: "",
+    },
+  };
 }
