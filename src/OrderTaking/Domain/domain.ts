@@ -2,12 +2,12 @@
 // 製品コード関連
 type WidgetCode = string;
 type GizmoCode = string;
-type ProductCode = { Widget: WidgetCode } | { Gizmo: GizmoCode };
+type ProductCode = { Type: "Widget"; Widget: WidgetCode } | { Type: "Gizmo"; Gizmo: GizmoCode };
 
 // 注文数量関連
 type UnitQuantity = number;
 type KilogramQuantity = number;
-type OrderQuantity = { Unit: UnitQuantity } | { Lilos: KilogramQuantity };
+type OrderQuantity = { Type: "Unit"; Unit: UnitQuantity } | { Type: "Lilos"; Lilos: KilogramQuantity };
 
 // 注文エンティティ関連
 type OrderId = undefined;
